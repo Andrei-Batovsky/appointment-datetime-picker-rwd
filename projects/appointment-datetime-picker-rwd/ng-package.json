@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/appointment-datetime-picker-rwd",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  }
+}

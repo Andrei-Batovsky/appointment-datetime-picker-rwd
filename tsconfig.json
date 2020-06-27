@@ -17,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "appointment-datetime-picker-rwd": [
+        "dist/appointment-datetime-picker-rwd/appointment-datetime-picker-rwd",
+        "dist/appointment-datetime-picker-rwd"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

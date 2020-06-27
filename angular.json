@@ -5,5 +5,46 @@
     "packageManager": "npm"
   },
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "appointment-datetime-picker-rwd": {
+      "projectType": "library",
+      "root": "projects/appointment-datetime-picker-rwd",
+      "sourceRoot": "projects/appointment-datetime-picker-rwd/src",
+      "prefix": "app-dt-picker",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/appointment-datetime-picker-rwd/tsconfig.lib.json",
+            "project": "projects/appointment-datetime-picker-rwd/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/appointment-datetime-picker-rwd/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/appointment-datetime-picker-rwd/src/test.ts",
+            "tsConfig": "projects/appointment-datetime-picker-rwd/tsconfig.spec.json",
+            "karmaConfig": "projects/appointment-datetime-picker-rwd/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/appointment-datetime-picker-rwd/tsconfig.lib.json",
+              "projects/appointment-datetime-picker-rwd/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "appointment-datetime-picker-rwd"
 }
